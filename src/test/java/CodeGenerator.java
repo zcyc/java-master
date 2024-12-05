@@ -20,7 +20,7 @@ public class CodeGenerator {
     //JDBC配置，请修改为你项目的实际配置
      private static final String JDBC_URL = "jdbc:mysql://182.92.101.240:3306/test?useSSL=false";
     private static final String JDBC_USERNAME = "test";
-    private static final String JDBC_PASSWORD = "dquz0md{gm$YOrSVL8!ZGRGBdfgGRGBB@_r};8!ZGRGBB@_r}";
+    private static final String JDBC_PASSWORD = "********";
 //    private static final String JDBC_URL = "jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/test?useSSL=false";
 //    private static final String JDBC_USERNAME = "${MYSQL_USER}";
 //    private static final String JDBC_PASSWORD = "${MYSQL_PASSWORD}";
