@@ -22,4 +22,11 @@ public interface UserService extends Service<User> {
      * @return true if the credentials are valid, false otherwise.
      */
     boolean validateCredentials(String username, String password);
+
+    /**
+     * Generates a secure unique 64-bit token.
+     *
+     * @return A 64-bit token as a String.
+     */
+    String generateToken();
 }
