@@ -27,6 +27,13 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
         userMapper.insert(user);
     }
 
+    public boolean validateCredentials(String username, String password) {
+        String encryptedPassword = encryptPassword(password);
+        User user = userMapper.findByUsernameAndPassword(username, encryptedPassword);
+        boolean validCredentials = user != null;
+        return validCredentials;
+    }
+
     public void save(User user) {
         addUser(user);
     }

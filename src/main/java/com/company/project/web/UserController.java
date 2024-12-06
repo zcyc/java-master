@@ -1,6 +1,7 @@
 package com.company.project.web;
 import com.company.project.core.Result;
 import com.company.project.core.ResultGenerator;
+import com.company.project.web.request.UserLoginRequest;
 import com.company.project.model.User;
 import com.company.project.service.UserService;
 import com.github.pagehelper.PageHelper;
@@ -23,6 +24,16 @@ public class UserController {
     public Result add(@RequestBody User user) {
         userService.save(user);
         return ResultGenerator.genSuccessResult();
+    }
+
+    @PostMapping("/login")
+    public Result login(@RequestBody UserLoginRequest loginRequest) {
+        boolean isValid = userService.validateCredentials(loginRequest.getUsername(), loginRequest.getPassword());
+        if (isValid) {
+            return ResultGenerator.genSuccessResult();
+        } else {
+            return ResultGenerator.genFailResult("Invalid credentials");
+        }
     }
 
     @PostMapping("/delete")

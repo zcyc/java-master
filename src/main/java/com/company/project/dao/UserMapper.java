@@ -4,10 +4,12 @@ import com.company.project.core.Mapper;
 import com.company.project.model.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 public interface UserMapper extends Mapper<User> {
 
-    @Insert("INSERT INTO users (username, password, nick_name, sex, register_date) VALUES (#{username}, #{password}, #{nickName}, #{sex}, #{registerDate})")
-    @Options(useGeneratedKeys = true, keyProperty = "id")
-    int insertUser(User user);
+
+    @Select("SELECT * FROM user WHERE username = #{username} AND password = #{passwordEncrypted}")
+    User findByUsernameAndPassword(@Param("username") String username, @Param("passwordEncrypted") String passwordEncrypted);
 }
