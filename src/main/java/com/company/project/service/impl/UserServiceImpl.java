@@ -37,6 +37,11 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
     public void save(User user) {
         addUser(user);
     }
+
+    @Override
+    public String generateToken() {
+        return java.util.UUID.randomUUID().toString().replace("-", "");
+    }
     
     private String encryptPassword(String password) {
         try {

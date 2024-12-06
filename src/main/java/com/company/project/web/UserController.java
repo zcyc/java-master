@@ -30,7 +30,8 @@ public class UserController {
     public Result login(@RequestBody UserLoginRequest loginRequest) {
         boolean isValid = userService.validateCredentials(loginRequest.getUsername(), loginRequest.getPassword());
         if (isValid) {
-            return ResultGenerator.genSuccessResult();
+            String token = userService.generateToken();
+            return ResultGenerator.genSuccessResult(token);
         } else {
             return ResultGenerator.genFailResult("Invalid credentials");
         }
