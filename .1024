@@ -1,1 +1,1 @@
-run_command: HOST=0.0.0.0 PORT=8080 mvn spring-boot:run
+run_command: mvn spring-boot:run -Dserver.port=8080 -Dserver.address=0.0.0.0

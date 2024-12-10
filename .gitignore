@@ -4,3 +4,20 @@ src/main/resources/application-localhost.properties
 # Clacky-related configuration
 .1024*
 !.1024
+
+# Java-specific files
+*.class
+*.jar
+*.war
+*.log
+
+# Spring framework-related files
+*.tmp
+*.temp
+*.bak
+.DS_Store
+
+# Maven directories
+**/target/
+**/node_modules/
+**/vendor/
