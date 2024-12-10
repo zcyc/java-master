@@ -4,18 +4,3 @@ src/main/resources/application-localhost.properties
 # Clacky-related configuration
 .1024*
 !.1024
-
-# Language-specific files
-*.class
-*.jar
-*.war
-*.log
-
-# Framework-related files
-*.tmp
-*.temp
-*.swp
-
-# Package manager directories
-node_modules/
-vendor/
