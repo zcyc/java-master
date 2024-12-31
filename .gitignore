@@ -22,3 +22,15 @@ src/main/resources/application-localhost.properties
 **/target/
 **/node_modules/
 **/vendor/
+**/.idea/
+**/.classpath
+**/.project
+**/.settings/
+**/build/
+**/dist/
+**/out/
+**/*.iml
+**/pom.xml.tag
+**/pom.xml.releaseBackup
+**/pom.xml.versionsBackup
+**/pom.xml.save
