@@ -1,1 +1,1 @@
-run_command: mvn spring-boot:run -Dserver.port=8080 -Dserver.address=0.0.0.0
+run_command: mvn spring-boot:run
